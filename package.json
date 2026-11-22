@@ -17,6 +17,18 @@
         "command": "icns-viewer.helloWorld",
         "title": "Hello World"
       }
+    ],
+    "languages": [
+      {
+        "id": "icns",
+        "extensions": [
+          ".icns"
+        ],
+        "icon": {
+          "light": "./icons/favicon-light.svg",
+          "dark": "./icons/favicon-dark.svg"
+        }
+      }
     ]
   },
   "scripts": {
