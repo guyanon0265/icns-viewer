@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@fiahfy/icns':
+        specifier: ^0.0.7
+        version: 0.0.7
     devDependencies:
       '@types/mocha':
         specifier: ^10.0.10
@@ -236,6 +240,14 @@ packages:
   '@eslint/plugin-kit@0.7.3':
     resolution: {integrity: sha512-IkO+/KEUvwbVpiURZg+P7zF74z5Jxe0UgJxVni+RtoHQ6IZieXaO02kmadomap/q+l6bc/jdPGGqTjhuZnuz1Q==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
+
+  '@fiahfy/icns@0.0.7':
+    resolution: {integrity: sha512-0apAtbUXTU3Opy/Z4h69o53voBa+am8FmdZauyagUMskAVYN1a5yIRk48Sf+tEdBLlefbvqLWPJ4pxr/Y/QtTg==}
+    engines: {node: '>=8'}
+
+  '@fiahfy/packbits@0.0.6':
+    resolution: {integrity: sha512-XuhF/edg+iIvXjkCWgfj6fWtRi/KrEPg2ILXj1l86EN4EssuOiPcLKgkMDr9cL8jTGtVd/MKUWW6Y0/ZVf1PGA==}
+    engines: {node: '>=8'}
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -1237,6 +1249,10 @@ packages:
     resolution: {integrity: sha512-C3FsVNH1udSEX48gGX1xfvwTWfsYWj5U+8/uK15BGzIGrKoUpghX8hWZwa/OFnakBiiVNmBvemTJR5mcy7iPcg==}
     engines: {node: '>=4'}
 
+  pngjs@6.0.0:
+    resolution: {integrity: sha512-TRzzuFRRmEoSW/p1KVAmiOgPco2Irlah+bGFCeNfJXxxYGwSw7YwAOAcd7X28K/m5bjBWKsC29KyoMfHbypayg==}
+    engines: {node: '>=12.13.0'}
+
   possible-typed-array-names@1.1.0:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
@@ -1736,6 +1752,13 @@ snapshots:
     dependencies:
       '@eslint/core': 1.2.1
       levn: 0.4.1
+
+  '@fiahfy/icns@0.0.7':
+    dependencies:
+      '@fiahfy/packbits': 0.0.6
+      pngjs: 6.0.0
+
+  '@fiahfy/packbits@0.0.6': {}
 
   '@humanfs/core@0.19.2':
     dependencies:
@@ -2911,6 +2934,8 @@ snapshots:
   pidtree@0.3.1: {}
 
   pify@3.0.0: {}
+
+  pngjs@6.0.0: {}
 
   possible-typed-array-names@1.1.0: {}
 
