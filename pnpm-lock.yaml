@@ -11,6 +11,9 @@ importers:
       '@fiahfy/icns':
         specifier: ^0.0.7
         version: 0.0.7
+      '@li0ard/jp2':
+        specifier: ^0.1.4
+        version: 0.1.4(typescript@6.0.3)
     devDependencies:
       '@types/mocha':
         specifier: ^10.0.10
@@ -298,6 +301,14 @@ packages:
 
   '@keyv/serialize@1.1.1':
     resolution: {integrity: sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==}
+
+  '@li0ard/jp2@0.1.4':
+    resolution: {integrity: sha512-H4/MIZjV4jXdJaiZ1Ssp25Y9lS/ZWCThXOS/jKR40jnZxPCxttwPS3a4SRWfqSFGXiw+tVbjO6znqtNW3a1yNg==}
+    peerDependencies:
+      typescript: ^5.9.3
+
+  '@pdf-lib/upng@1.0.1':
+    resolution: {integrity: sha512-dQK2FUMQtowVP00mtIksrlZhdFXQZPC+taih1q4CvPZ5vqdxR/LKBaFg0oAfzd1GlHZXXSPdQfzQnt+ViGvEIQ==}
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -1805,6 +1816,15 @@ snapshots:
       keyv: 5.6.0
 
   '@keyv/serialize@1.1.1': {}
+
+  '@li0ard/jp2@0.1.4(typescript@6.0.3)':
+    dependencies:
+      '@pdf-lib/upng': 1.0.1
+      typescript: 6.0.3
+
+  '@pdf-lib/upng@1.0.1':
+    dependencies:
+      pako: 1.0.11
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
