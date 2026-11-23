@@ -12,6 +12,18 @@
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
+    "customEditors": [
+      {
+        "viewType": "icnsViewer.previewEditor",
+        "displayName": "Image Preview",
+        "priority": "default",
+        "selector": [
+          {
+            "filenamePattern": "*.icns"
+          }
+        ]
+      }
+    ],
     "commands": [
       {
         "command": "icns-viewer.helloWorld",
