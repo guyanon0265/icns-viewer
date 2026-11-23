@@ -26,10 +26,54 @@
     ],
     "commands": [
       {
-        "command": "icns-viewer.helloWorld",
-        "title": "Hello World"
+        "command": "icnsViewer.zoomIn",
+        "title": "Zoom In",
+        "category": "ICNS Preview"
+      },
+      {
+        "command": "icnsViewer.zoomOut",
+        "title": "Zoom Out",
+        "category": "ICNS Preview"
+      },
+      {
+        "command": "icnsViewer.selectZoomLevel",
+        "title": "Select Zoom Level",
+        "category": "ICNS Preview"
+      },
+      {
+        "command": "icnsViewer.copyImage",
+        "title": "Copy",
+        "category": "ICNS Preview"
       }
     ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "icnsViewer.zoomIn",
+          "when": "activeCustomEditorId == 'icnsViewer.previewEditor'",
+          "group": "1_icnsViewer"
+        },
+        {
+          "command": "icnsViewer.zoomOut",
+          "when": "activeCustomEditorId == 'icnsViewer.previewEditor'",
+          "group": "1_icnsViewer"
+        },
+        {
+          "command": "icnsViewer.selectZoomLevel",
+          "when": "activeCustomEditorId == 'icnsViewer.previewEditor'"
+        },
+        {
+          "command": "icnsViewer.copyImage",
+          "when": "false"
+        }
+      ],
+      "webview/context": [
+        {
+          "command": "icnsViewer.copyImage",
+          "when": "webviewId == 'icnsViewer.previewEditor'"
+        }
+      ]
+    },
     "languages": [
       {
         "id": "icns",
