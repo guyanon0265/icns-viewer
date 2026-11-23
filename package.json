@@ -2,13 +2,19 @@
   "name": "icns-viewer",
   "displayName": "icns-viewer",
   "description": "Adds image preview for .icns files",
+  "author": "Guy Anonymous",
+  "publisher": "GuyAnonymous",
   "version": "1.0.0",
   "icon": "icon.png",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.146.0"
   },
   "categories": [
     "Visualization"
+  ],
+  "keywords": [
+    "ICNS", "Viewer", "Preview", "Image", "VSCode"
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",
