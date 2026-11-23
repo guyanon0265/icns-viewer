@@ -41,7 +41,7 @@ export async function decodeIcnsIcons(uri: vscode.Uri): Promise<DecodedIcon[]> {
 			jpx.parse(Buffer.from(img.image));
 
 			const tile = jpx.tiles[0];
-			if (!tile) {continue};
+			if (!tile) {continue;}
 
 			const { width, height } = tile;
 			const src: Uint8Array = tile.items;
