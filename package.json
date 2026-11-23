@@ -2,7 +2,8 @@
   "name": "icns-viewer",
   "displayName": "icns-viewer",
   "description": "Adds image preview for .icns files",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.146.0"
   },
