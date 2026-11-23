@@ -8,6 +8,7 @@ demo/**
 .yarnrc
 esbuild.js
 vsc-extension-quickstart.md
+demo.gif
 **/tsconfig.json
 **/eslint.config.mjs
 **/*.map
