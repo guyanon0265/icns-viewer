@@ -8,6 +8,7 @@ import { BinarySizeStatusBarEntry } from '../binarySizeStatusBarEntry';
 import { MediaPreview, PreviewState, isGitLfsPointer, reopenAsText } from '../mediaPreview';
 import { escapeAttribute } from '../util/dom';
 import { generateUuid } from '../util/uuid';
+import { getLargestIcnsDataUri } from '../util/icns';
 import { SizeStatusBarEntry } from './sizeStatusBarEntry';
 import { Scale, ZoomStatusBarEntry } from './zoomStatusBarEntry';
 
@@ -199,7 +200,7 @@ class ImagePreview extends MediaPreview {
 
 	<title>Image Preview</title>
 
-	<link rel="stylesheet" href="${escapeAttribute(this.extensionResource('media', 'icnsViewer.css'))}" type="text/css" media="screen" nonce="${nonce}">
+	<link rel="stylesheet" href="${escapeAttribute(this.extensionResource('media', 'imagePreview.css'))}" type="text/css" media="screen" nonce="${nonce}">
 
 	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data: ${cspSource}; connect-src ${cspSource}; script-src 'nonce-${nonce}'; worker-src blob:; style-src ${cspSource} 'nonce-${nonce}';">
 	<meta id="image-preview-settings" data-settings="${escapeAttribute(JSON.stringify(settings))}">
@@ -214,21 +215,17 @@ class ImagePreview extends MediaPreview {
 		<p>${vscode.l10n.t("The image is stored with Git LFS and is not available for preview.")}</p>
 		<a href="#" class="open-file-link">${vscode.l10n.t("Open file using VS Code's standard text/binary editor?")}</a>
 	</div>
-	<script src="${escapeAttribute(this.extensionResource('media', 'icnsViewer.js'))}" nonce="${nonce}"></script>
+	<script src="${escapeAttribute(this.extensionResource('media', 'imagePreview.js'))}" nonce="${nonce}"></script>
 </body>
 </html>`;
 	}
 
-	private async getResourcePath(webviewEditor: vscode.WebviewPanel, resource: vscode.Uri, version: string): Promise<string | null> {
-		if (await isGitLfsPointer(resource)) {
-			return null;
-		}
-
-		// Avoid adding cache busting if there is already a query string
-		if (resource.query) {
-			return webviewEditor.webview.asWebviewUri(resource).toString();
-		}
-		return webviewEditor.webview.asWebviewUri(resource).with({ query: `version=${version}` }).toString();
+	private async getResourcePath(
+		_webviewEditor: vscode.WebviewPanel,
+		resource: vscode.Uri,
+		_version: string
+	): Promise<string> {
+		return getLargestIcnsDataUri(resource);
 	}
 
 	private extensionResource(...parts: string[]) {
