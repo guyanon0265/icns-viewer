@@ -1,7 +1,7 @@
 {
-  "name": "icns-viewer",
-  "displayName": "icns-viewer",
-  "description": "Adds image preview for .icns files",
+  "name": "icns-file-viewer",
+  "displayName": "ICNS Viewer",
+  "description": "Adds an image preview for .icns files",
   "author": "Guy Anonymous",
   "publisher": "GuyAnonymous",
   "version": "1.0.0",
