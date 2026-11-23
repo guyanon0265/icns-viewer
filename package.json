@@ -7,7 +7,7 @@
     "vscode": "^1.146.0"
   },
   "categories": [
-    "Other"
+    "Visualization"
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",
@@ -75,6 +75,7 @@
   },
   "dependencies": {
     "@fiahfy/icns": "^0.0.7",
-    "@li0ard/jp2": "^0.1.4"
+    "@li0ard/jp2": "^0.1.4",
+    "vscode-uri": "^3.2.0"
   }
 }
